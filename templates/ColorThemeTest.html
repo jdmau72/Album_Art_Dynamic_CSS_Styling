@@ -10,17 +10,17 @@
 <head>
     <meta charset="UTF-8">
     <script src="../static/js/jquery-3.7.1.min.js"></script>
-    <script src="../static/js/ColorThemeTest.js"></script>
+<!--    <script src="../static/js/ColorThemeTest.js"></script>-->
     <title>Title</title>
 </head>
 
 <body>
-<div id='albumBanner'>
+<div id='albumBanner' style="background: linear-gradient(to bottom, {{colorTheme[0]}}, black)">
     <img src="../static/img/joni2.jpg" alt="">
     <h1>Album Title</h1>
     <h2>Artist</h2>
     <h3>ReleaseYear</h3>
-    <h3 id='TEST'>h</h3>
+    <h3 id='TEST'>{{colorTheme[0][0]}}</h3>
 
 </div>
 
