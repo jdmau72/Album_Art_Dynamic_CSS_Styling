@@ -106,11 +106,11 @@ def findDominantColors(imgPath, n_colors):
     return (primaryColor, secondaryColor)
 
 
-findDominantColors("okcomputer.png", 7)
-findDominantColors("joni1.jpg", 7)
-findDominantColors("joni2.jpg", 7)
-colorA, colorB = (findDominantColors("okcomputer.png", 7))
-print(colorA)
-print(colorB)
-
-sys.stdout.flush()
+# findDominantColors("okcomputer.png", 7)
+# findDominantColors("joni1.jpg", 7)
+# findDominantColors("joni2.jpg", 7)
+# colorA, colorB = (findDominantColors("okcomputer.png", 7))
+# print(colorA)
+# print(colorB)
+#
+# sys.stdout.flush()
