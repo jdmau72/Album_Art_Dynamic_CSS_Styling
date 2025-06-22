@@ -15,17 +15,18 @@
 </head>
 
 <body>
-<div id='albumBanner' style="background: linear-gradient(to bottom, {{colorTheme[0]}}, {{colorTheme[1]}})">
-    <div class="albumBannerContainer">
+<div id='albumBanner' class="albumBannerContainer" style="background: linear-gradient(to bottom, {{colorTheme[0]}}, {{colorTheme[1]}})">
+
         <div class="coverArtContainer">
-            <img src="{{album.ArtworkFilePath}}" alt="">
+            <img class="coverArt" src="{{albumArtPath}}back.jpg" alt="">
+            <img class="coverArt" src="{{albumArtPath}}front.jpg" alt="">
         </div>
         <div class="albumDetailsContainer">
             <h1>{{album.Title}}</h1>
             <h2>{{album.Artist}}</h2>
             <h3>{{album.ReleaseYear}}</h3>
         </div>
-    </div>
+
 </div>
 
 

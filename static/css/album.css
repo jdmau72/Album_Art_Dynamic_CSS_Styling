@@ -1,18 +1,39 @@
+body{
+    background: black;
+}
+
+/*#albumBanner {*/
+/*    margin: 10%;*/
+/*}*/
+
 .albumBannerContainer {
     align-items: center;
     display: flex;
-    margin: 0px auto;
-    /*display: inline;*/
+    height: 30%;
+    margin: 1%;
+    border: black solid 1px;
 }
 
 .coverArtContainer {
-    position: relative;
+    position: inherit;
     align-items: center;
     box-shadow: 10px 5px 5px black;
+    display: flex;
+    height: 40%;
+    width: 40%;
+    margin: 3%
 }
 
-.albumDetail {
-    position: relative;
-    text-align: right;
+.coverArtContainer img {
+    height: 50%;
+    width: 50%;
 }
+
+
+.albumDetailsContainer {
+    position: relative;
+    margin-left: 5%;
+    text-align: left;
+}
+
 
