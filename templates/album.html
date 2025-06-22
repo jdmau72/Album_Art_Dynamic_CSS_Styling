@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    h1, h2, h3, h4, h5, h6 {
-        color: black;
-    }
-</style>
+<!--<style>-->
+<!--    h1, h2, h3, h4, h5, h6 {-->
+<!--        color: black;-->
+<!--    }-->
+<!--</style>-->
 
 <head>
     <meta charset="UTF-8">
     <script src="../static/js/jquery-3.7.1.min.js"></script>
-<!--    <script src="../static/js/ColorThemeTest.js"></script>-->
     <title>Title</title>
+    <link rel="stylesheet" href="../static/css/album.css">
 </head>
 
 <body>
 <div id='albumBanner' style="background: linear-gradient(to bottom, {{colorTheme[0]}}, {{colorTheme[1]}})">
-    <img src="{{album.ArtworkFilePath}}" alt="">
-    <h1>{{album.Title}}</h1>
-    <h2>{{album.Artist}}</h2>
-    <h3>{{album.ReleaseYear}}</h3>
-<!--    <h3 id='TEST'>{{colorTheme[0][0]}}</h3>-->
-
+    <div class="albumBannerContainer">
+        <div class="coverArtContainer">
+            <img src="{{album.ArtworkFilePath}}" alt="">
+        </div>
+        <div class="albumDetailsContainer">
+            <h1>{{album.Title}}</h1>
+            <h2>{{album.Artist}}</h2>
+            <h3>{{album.ReleaseYear}}</h3>
+        </div>
+    </div>
 </div>
 
 

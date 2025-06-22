@@ -111,10 +111,10 @@ def findDominantColors(imgPath, n_colors):
     return (colorA, colorB)
 
 
-# colorA, colorB = findDominantColors("static/img/songsinthekeyoflife.jpg", 7)
+# colorA, colorB = findDominantColors("static/img/front.jpg", 7)
 # # # findDominantColors("joni1.jpg", 7)
 # # # findDominantColors("joni2.jpg", 7)
-# # # colorA, colorB = (findDominantColors("okcomputer.png", 7))
+# # # colorA, colorB = (findDominantColors("front.png", 7))
 # print(colorA)
 # print(colorB)
 #

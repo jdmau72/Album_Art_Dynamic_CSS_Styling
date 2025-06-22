@@ -45,17 +45,20 @@ def albumPage():
     id = request.args.get('id', default = 1, type=int)
     album = db.session.query(Album).filter(Album.AlbumId == id).all()[0]
 
-    # creates an album instance
-    # album = Album("OK Computer", "static/img/okcomputer.png", "Radiohead", '1997')
+    # get the album art path
+
 
     #get the colors from the image
-    colorA, colorB = findDominantColors(album.ArtworkFilePath, 3)
+    colorA, colorB = findDominantColors(getAlbumArtPath(album), 4)
     # saves the colors extracted as "rgb()" format for CSS
     colorTheme = [f"rgb({colorA[0]},{colorA[1]},{colorA[2]})", f"rgb({colorB[0]},{colorB[1]},{colorB[2]})"]
     # loads the template
     return render_template("album.html", colorTheme=colorTheme, album=album)
 
 
+# should probably put somewhere else, but defining how to get the path to the album artwork
+def getAlbumArtPath(album):
+    return f"static/img/albumArt/artists/{album.AlbumId}/{album.ArtistId}/"
 
 
 if __name__ == '__main__':
