@@ -100,16 +100,21 @@ def findDominantColors(imgPath, n_colors):
     # cv2.imshow(f'{n_colors} Most Common Colors', np.hstack(bars))
     # cv2.waitKey(0)
 
+    # gets the two most major colors, then flips them (since OpenCV used gbr, but we want rgb)
     primaryColor = sorted_bars.pop()[0][0]
-    secondaryColor = sorted_bars.pop()[0][0]
+    secondaryColor = sorted_bars.pop(0)[0][0]
 
-    return (primaryColor, secondaryColor)
+    # have to reverse into RGB format, and convert to ints
+    colorA = [int(primaryColor[2]), int(primaryColor[1]), int(primaryColor[0])]
+    colorB = [int(secondaryColor[2]), int(secondaryColor[1]), int(secondaryColor[0])]
+
+    return (colorA, colorB)
 
 
-# findDominantColors("okcomputer.png", 7)
-# findDominantColors("joni1.jpg", 7)
-# findDominantColors("joni2.jpg", 7)
-# colorA, colorB = (findDominantColors("okcomputer.png", 7))
+# colorA, colorB = findDominantColors("static/img/songsinthekeyoflife.jpg", 7)
+# # # findDominantColors("joni1.jpg", 7)
+# # # findDominantColors("joni2.jpg", 7)
+# # # colorA, colorB = (findDominantColors("okcomputer.png", 7))
 # print(colorA)
 # print(colorB)
 #

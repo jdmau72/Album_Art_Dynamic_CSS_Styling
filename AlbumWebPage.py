@@ -49,7 +49,7 @@ def albumPage():
     # album = Album("OK Computer", "static/img/okcomputer.png", "Radiohead", '1997')
 
     #get the colors from the image
-    colorA, colorB = findDominantColors(album.ArtworkFilePath, 5)
+    colorA, colorB = findDominantColors(album.ArtworkFilePath, 3)
     # saves the colors extracted as "rgb()" format for CSS
     colorTheme = [f"rgb({colorA[0]},{colorA[1]},{colorA[2]})", f"rgb({colorB[0]},{colorB[1]},{colorB[2]})"]
     # loads the template
